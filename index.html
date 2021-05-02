@@ -241,6 +241,17 @@
 
     
     <script>
+      function switchToColor(color) {
+        try {
+          document.querySelectorAll(".page").forEach(function(page) {
+            page.style.borderColor = color;
+          });
+          document.querySelectorAll(".avatar").forEach(function(avatar) {
+            avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
+          });
+        } catch (error) {}
+      }
+      document.getElementById("red").addEventListener("click", switchToColor.bind(this, "red"));
       document.getElementById("hadouken").addEventListener("click", function() {
 			  this.childNodes[2].play();
 		  });
