@@ -44,3 +44,8 @@
 .timeline > li:nth-child(2n) {
   animation-duration: 1.5s;
 }
+
+main{
+  transition: background-color 2s;
+  margin-bottom: 50vh;
+}

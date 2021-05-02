@@ -239,16 +239,23 @@
       </article>
     </main>
 
+    <footer>
+      <q>The answer lies in the heart of battle</q> - Ryu
+    </footer>
     
     <script>
       function switchToColor(color) {
+        const main = document.querySelector('main');
+        const footer = document.querySelector('footer');
         try {
           document.querySelectorAll(".page").forEach(function(page) {
             page.style.borderColor = color;
           });
-          document.querySelectorAll(".avatar").forEach(function(avatar) {
-            avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
-          });
+
+          main.style.backgroundColor = color;
+
+          footer.style.backgroundColor = "midnightblue";
+          footer.style.color = "#fff"
         } catch (error) {}
       }
       document.getElementById("red").addEventListener("click", switchToColor.bind(this, "red"));
