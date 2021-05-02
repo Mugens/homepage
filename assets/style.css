@@ -45,7 +45,7 @@
   animation-duration: 1.5s;
 }
 
-main{
+main {
   transition: background-color 2s;
   margin-bottom: 50vh;
 }
