@@ -40,8 +40,7 @@
 
 
 
-    <link rel="stylesheet" href="https://binary-studio-academy.github.io/stage-2/assets/stylesheets/base.css">
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./assets/base.css">
   </head>
   <body>
     <main>
@@ -247,18 +246,19 @@
       function switchToColor(color) {
         const main = document.querySelector('main');
         const footer = document.querySelector('footer');
+        const page = document.querySelector(".page");
         try {
-          document.querySelectorAll(".page").forEach(function(page) {
-            page.style.borderColor = color;
-          });
 
+          page.style.borderColor = color;
           main.style.backgroundColor = color;
 
           footer.style.backgroundColor = "midnightblue";
-          footer.style.color = "#fff"
+          footer.style.color = "#fff";
+
         } catch (error) {}
       }
-      document.getElementById("red").addEventListener("click", switchToColor.bind(this, "red"));
+
+      document.getElementById("red").addEventListener("click", ()=>switchToColor("red"));
       document.getElementById("hadouken").addEventListener("click", function() {
 			  this.childNodes[2].play();
 		  });
